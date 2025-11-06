@@ -2,7 +2,7 @@
 
 # 定义函数
 yt-dlp-1080() {
-    url="$1"
+    local url="$1"
     # 设置格式 1080p
     yt-dlp -f "bestvideo[height<=1080]+bestaudio/best[height<=1080]" \
     
