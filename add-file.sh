@@ -1,17 +1,7 @@
 #!/bin/bash
 
 case $1 in
-    # -h)
-    #     echo "Usage: $0 [-m | -c | -d | -git]"
-    #     echo "  -m: Create an Makefile."
-    #     echo "  -c: Create an CMakeLists.txt."
-    #     echo "  -d: Create a Dockerfile."
-    #     echo "  -git: Create a .gitignore file."
-    #     echo "  -r: Create a README.md file."
-    #     exit 0
-    # ;;
     -m)
-        
         # 如果 Makefile 不存在，则添加以下内容
         if [[ ! -f Makefile ]]; then
             touch Makefile
@@ -22,13 +12,6 @@ case $1 in
         else
             echo "Makefile already exists."
         fi
-        
-        
-        
-        # touch Makefile
-        # echo ".PHONY: all clean run" >> Makefile
-        # echo "run:" >> Makefile
-        # echo " Makefile created successfully."
     ;;
     -r)
         if [ ! -f README.md ]; then
@@ -45,16 +28,10 @@ case $1 in
         else
             echo "CMakeLists.txt already exists."
         fi
-        # touch CMakeLists.txt
-        # echo " CMakeLists.txt created successfully."
     ;;
     -git)
         if [ ! -f .gitignore ]; then
             touch .gitignore
-            # echo "# Ignore build files" >> .gitignore
-            # echo "build/" >> .gitignore
-            # echo "# Ignore temporary files" >> .gitignore
-            # echo "*.tmp" >> .gitignore
             echo ".gitignore created successfully."
         else
             echo ".gitignore already exists."
@@ -74,7 +51,7 @@ case $1 in
         echo "  -c: Create an CMakeLists.txt."
         echo "  -d: Create a Dockerfile."
         echo "  -git: Create a .gitignore file."
-        # echo "  pwd: $PWD"
+        echo "  -r: Create a README.md file."
         exit 0
     ;;
 esac
